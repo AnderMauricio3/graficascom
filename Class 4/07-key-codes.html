@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>keycodesModification</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <aside>Open debugging console in web browser and press arrow key.</aside>
+    
+    <script src= "keycodes.js"></script>
+
+    <script>
+    window.onload = function () {
+
+      function onKeyboardEvent (event) {
+        switch (event.keyCode) {
+          case keycode.SPACE:
+          console.log("SPACE");
+          break;
+        case keycode.UP:
+          console.log("UP");
+          break;
+        case keycode.DOWN:
+          console.log("DOWN");
+          break;
+        case keycode.LEFT:
+          console.log("LEFT");
+          break;
+        case keycode.RIGHT:
+          console.log("RIGHT");
+          break;
+        case keycode.A:
+          console.log("A");
+          break;
+        case keycode.B:
+          console.log("B");
+          break;
+        case keycode.C:
+          console.log("C");
+          break;
+        case keycode.D:
+          console.log("D");
+          break;
+        case keycode.E:
+          console.log("E");
+          break;
+        case keycode.F:
+          console.log("F");
+          break;
+        case keycode.G:
+          console.log("G");
+          break;
+        case keycode.H:
+          console.log("H");
+          break;
+        case keycode.I:
+          console.log("I");
+          break;
+        case keycode.J:
+          console.log("J");
+          break;
+        case keycode.K:
+          console.log("K");
+          break;
+        case keycode.L:
+          console.log("L");
+          break;
+        case keycode.M:
+          console.log("M");
+          break;
+        case keycode.N:
+          console.log("N");
+          break;
+        case keycode.O:
+          console.log("O");
+          break;
+        case keycode.P:
+          console.log("P");
+          break;
+        case keycode.Q:
+          console.log("Q");
+          break;
+        case keycode.R:
+          console.log("R");
+          break;
+        case keycode.S:
+          console.log("S");
+          break;
+        case keycode.T:
+          console.log("T");
+          break;
+        case keycode.U:
+          console.log("U");
+          break;
+        case keycode.V:
+          console.log("V");
+          break;
+        case keycode.W:
+          console.log("W");
+          break;
+        case keycode.X:
+          console.log("X");
+          break;
+        case keycode.Y:
+          console.log("Y");
+          break;
+        case keycode.Z:
+          console.log("Z");
+          break;
+        default:
+          console.log(event.keyCode);
+        }
+      }
+      window.addEventListener('keydown', onKeyboardEvent, false);
+    };
+    </script>
+  </body>
+</html>
