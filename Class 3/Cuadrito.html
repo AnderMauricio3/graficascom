@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>Pagina 4</title>
+ <style>
+     canvas{
+         border: 10px solid rgb(254, 172, 255);
+         background-color: white;
+     }
+ </style>
+</head>
+<body>
+  <canvas id="micanvas" width="800" height="600"></canvas>
+
+
+<script>
+   var x = 10;
+   var y = 50;
+   var dx = 4;
+   var dy = 3;
+   var currentColor = getRandomColor();
+
+   function getRandomColor() {
+       var letters = '0123456789ABCDEF';
+       var color = '#';
+       for (var i = 0; i < 6; i++) {
+           color += letters[Math.floor(Math.random() * 16)];
+       }
+       return color;
+   }
+
+   function animate(){
+       requestAnimationFrame(animate);
+       var canvas = document.getElementById("micanvas");
+       var context = canvas.getContext("2d");
+       context.clearRect(0, 0, innerWidth, innerHeight);
+
+
+       context.fillStyle = currentColor;
+       context.fillRect(x, y, 100, 100);
+
+       if (x + 100 > 800 || x < 0){
+           dx = -dx;
+           currentColor = getRandomColor(); // Cambia el color al azar al rebotar
+       }
+       if (y + 100 > 600 || y < 0){
+           dy = -dy;
+           currentColor = getRandomColor();
+       }
+
+       x += dx;
+       y += dy;
+
+   }
+   animate();
+</script>
+</body>
+</html>
+
+
