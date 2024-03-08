@@ -1,0 +1,21 @@
+body{
+text-align: center;
+background-image: url('Green.jpg');
+background-size: cover;
+}
+
+h1{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: italic;    
+    font-weight: 600;
+    color:white
+}
+
+canvas {
+border: 5px solid white;
+image-rendering: optimizeQuality;
+background-image: url('Fondo.jpg');
+background-size: cover;
+}
+

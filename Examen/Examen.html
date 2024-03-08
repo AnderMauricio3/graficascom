@@ -1,0 +1,60 @@
+    <!doctype html>
+    <html>
+
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <title>Examen</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1> Examen</h1>
+        <canvas id="canvas" width="1000" height="600"></canvas>
+        <aside></aside>
+        
+        <script>
+            window.onload = function () {
+            var canvas = document.getElementById('canvas'),
+                context = canvas.getContext('2d'),
+                KikiImg = new Image(),
+                angle = 0,
+                range = 50,
+                centerY = canvas.height / 2,
+                xspeed = 1,
+                yspeed = 0.05,
+                xpos = 0,
+                ypos = centerY;
+    
+            KikiImg.src = 'KikiAndJiji.png'; // Assuming 'star.png' is the image of the star
+
+            (function drawFrame () {
+                window.requestAnimationFrame(drawFrame, canvas);
+                
+                context.clearRect(0, 0, canvas.width, canvas.height);
+    
+                // Drawing the star image
+                context.drawImage(KikiImg, xpos, ypos);
+    
+                // Calculate the new position
+                xpos += xspeed;
+                angle += yspeed;
+                ypos = centerY + Math.sin(angle) * range;
+    
+                // Check for canvas boundaries and change direction
+                if (xpos + KikiImg.width >= canvas.width || xpos <= 0) {
+                xspeed *= -1;
+                }
+                if (ypos + KikiImg.height >= canvas.height || ypos <= 0) {
+                yspeed *= -1;
+            }
+            }());
+        };
+        </script>
+    </body>
+    </html>
+
+    <audio controls loop autoplay>
+        <source src="PianoKiki.mp3" tyope="audio/mpeg">;
+      </audio>  
