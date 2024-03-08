@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <title>Pagina 3</title>
+   <style>
+       canvas{
+           border: 1px solid #19c050;
+           background-color: white;
+       }
+   </style>
+   <script>
+       var x=Math.random() * 800;
+       var y=Math.random() * 600;
+       var dx=4;
+       function animate(){
+           requestAnimationFrame(animate);
+           var canvas = document.getElementById("micanvas");
+           var context = canvas.getContext("2d");
+           context.clearRect(0, 0, innerWidth, innerHeight);
+           //console.log('animando');
+           context.font = '40pt Calibri';
+            context.fillStyle = 'blue';
+            context.fillText('Hello World!', x, y);
+           context.fillStyle='rgba(255,0,0,1)';
+           context.fillRect(x,10,100,100);
+           
+            if (x > 800 || x < 0){
+                dx= -dx;
+            }
+           x+=dx;
+           
+       }
+       animate();
+   </script>
+   </head>
+ <body>
+    <canvas id="micanvas" width="800" height="600"></canvas>
+ </body>
+</html>

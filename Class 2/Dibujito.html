@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Demon Canvas</title>
+    <style>
+        canvas {
+            background-color: rgb(148, 206, 148);
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+        var canvas = document.getElementById("micanvas");
+        var context = canvas.getContext("2d");
+    // los valores son  (x,y,hancho,alto)
+    // body
+        context.fillStyle = "white";
+        context.fillRect(210, 330, 180, 150);
+     // body
+        context.fillStyle = "black";
+        context.fillRect(210, 330, 180, 60);
+      // hands
+        context.fillStyle = "black";
+        context.fillRect(150, 330, 50, 60);
+        context.fillRect(400, 330, 50, 60);
+      // feet
+        context.fillStyle = "black";
+        context.fillRect(150, 430, 80, 60);
+        context.fillRect(360, 430, 80, 60);
+    // head
+        context.fillStyle = "white";
+        context.fillRect(230, 200, 140, 130);
+    // ears
+        context.fillStyle = "black";
+        context.fillRect(220, 180, 40, 40);
+        context.fillRect(340, 180, 40, 40);
+    // eyes
+        context.fillStyle = "black";
+        context.fillRect(260, 230, 20, 20);
+        context.fillRect(320, 230, 20, 20);
+    // mouth
+        context.fillStyle = "black";
+        context.fillRect(280, 300, 10, 10);
+   // nose
+        context.fillStyle = "black";
+        context.fillRect(290, 265, 30, 20);
+    }
+    </script>
+    </head>
+    <body>
+        <canvas id="micanvas" width="800" height="600"></canvas>
+ </body>
+</html>
