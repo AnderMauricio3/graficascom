@@ -1,0 +1,26 @@
+body{
+    text-align: center;
+    align-items: center;
+    background-size: cover;
+    background-color:#b8d2b9;
+    display: flex;
+    flex-direction: column;
+
+    }
+    
+    h1{
+        font-family: "Cormorant Upright", serif;
+        font-optical-sizing: auto;
+        font-style: italic;    
+        font-weight: 300;
+        color:white
+    }
+    
+    canvas {
+    border: 5px solid white;
+    image-rendering: optimizeQuality;
+    background-image: url('landscape.jpg');
+    background-size: cover;
+    }
+    
+    

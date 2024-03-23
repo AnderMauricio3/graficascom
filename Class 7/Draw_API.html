@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujo con API</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Dibujito</h1>
+    <canvas id="canvas" width="700" height="500"></canvas>
+    <script>
+        window.onload = function(){
+            var canvas = document.getElementById('canvas'),
+            context = canvas.getContext('2d');
+
+                //casa
+            context.save();
+            context.fillStyle = "#F8C8C8";
+            context.strokeStyle = "#c98b71";
+            context.lineWidth = 5;
+            context.beginPath();
+            context.moveTo(80,350);
+            context.lineTo(320,350);
+            context.lineTo(320,180);
+            context.lineTo(80,180);
+            context.closePath();
+            context.stroke();
+            context.fill();
+            context.restore();
+                //Chimenea
+            context.save();
+            context.fillStyle = "#f7f6c3";
+            context.strokeStyle = "#c98b71";
+            context.lineWidth = 5;
+            context.beginPath();
+            context.moveTo(180,130);
+            context.lineTo(120,130);
+            context.lineTo(120,80);
+            context.lineTo(180,80);
+            context.closePath();
+            context.stroke();
+            context.fill();
+            context.restore();
+                //Techo
+            context.save();
+            context.fillStyle = "#f7f6c3";
+            context.strokeStyle = "#c98b71";
+            context.lineWidth = 5;
+            context.beginPath();
+            context.moveTo(350,230);
+            context.lineTo(50,230)
+            context.lineTo(100,130)
+            context.lineTo(290,130)
+            context.closePath();
+            context.stroke();
+            context.fill();
+            context.restore();
+                //Puerta 
+            context.save();
+            context.fillStyle = "#f7f6c3";
+            context.strokeStyle = "#c98b71";
+            context.lineWidth = 5;
+            context.beginPath();
+            context.moveTo(230,350);
+            context.lineTo(170,350);
+            context.lineTo(170,290);
+            context.lineTo(230,290);
+            context.closePath();
+            context.stroke();
+            context.fill();
+            context.restore();
+                //Ventana izq
+            context.save();
+            context.fillStyle = "#d0d9f7";
+            context.strokeStyle = "#c98b71";
+            context.lineWidth = 5;
+            context.beginPath();
+            context.arc(130,280,30,0,2*Math.PI);
+            context.stroke();
+            context.fill();
+            context.closePath();
+            context.restore();
+                //lineas ventana izq
+            context.strokeStyle = "#c98b71";
+            context.lineWidth =3;
+            context.beginPath();
+            context.moveTo(130,250);
+            context.lineTo(130,310);
+            context.stroke();
+            context.fill();
+            context.closePath();
+            context.restore();
+                //ventana dch
+            context.save();
+            context.fillStyle = "#d0d9f7";
+            context.strokeStyle = "#c98b71";
+            context.lineWidth = 5;
+            context.beginPath();
+            context.arc(270,280,30,0,2*Math.PI);
+            context.stroke();
+            context.fill();
+            context.closePath();
+            context.restore();
+                //lineas ventana drch
+            context.strokeStyle = "#c98b71";
+            context.lineWidth =3;
+            context.beginPath();
+            context.moveTo(270,250);
+            context.lineTo(270,310);
+            context.stroke();
+            context.fill();
+            context.closePath();
+            context.restore();
+                //camino 
+            context.save();
+            context.fillStyle = "#f2d29f";
+            context.lineWidth = 5;
+            context.beginPath();
+            context.moveTo(230,350);
+            context.lineTo(170,350);
+            context.lineTo(120,500);
+            context.lineTo(280,500);
+            context.closePath();
+            context.stroke();
+            context.fill();
+            context.restore();
+                //luna
+            context.save();
+            context.fillStyle = "#b5cade";
+            context.strokeStyle = "#99bce4";
+            context.lineWidth =5;
+            context.beginPath();
+            context.arc(600,80,70,0,2*Math.PI);
+            context.stroke();
+            context.fill();
+            context.closePath();
+            context.restore();
+                //luna lunares 
+            context.save();
+            context.fillStyle = "#99bce4";
+            context.strokeStyle = "#99bce4";
+            context.beginPath();
+            context.arc(620,130,6,0,2*Math.PI);
+            context.stroke();
+            context.fill();
+            context.closePath();
+            context.restore();
+                //luna lunares 
+            context.save();
+            context.fillStyle = "#99bce4";
+            context.strokeStyle = "#99bce4";
+            context.beginPath();
+            context.arc(645,105,9,0,2*Math.PI);
+            context.stroke();
+            context.fill();
+            context.closePath();
+            context.restore();
+                //luna lunares 
+            context.save();
+            context.fillStyle = "#99bce4";
+            context.strokeStyle = "#99bce4";
+            context.beginPath();
+            context.arc(645,65,13,0,2*Math.PI);
+            context.stroke();
+            context.fill();
+            context.closePath();
+            context.restore();
+                //tallo champinion
+            context.save();
+            context.fillStyle = "#9aa777";
+            context.strokeStyle = "#4c6b38";
+            context.lineWidth = 5;
+            context.beginPath();
+            context.moveTo(635,400);
+            context.lineTo(610,400);
+            context.lineTo(610,490);
+            context.lineTo(635,460);
+            context.closePath();
+            context.stroke();
+            context.fill();
+            context.restore();
+                //champinon
+            context.save();
+            context.fillStyle = "#E67F80";
+            context.strokeStyle = "E67F80";
+            context.beginPath();
+            context.arc(630,380,60,13,1*Math.PI);
+            context.stroke();
+            context.fill();
+            context.closePath();
+            context.restore();
+                //Champinon dot
+            context.save();
+            context.fillStyle = "white";
+            context.strokeStyle = "white";
+            context.beginPath();
+            context.arc(620,420,9,0,2*Math.PI);
+            context.stroke();
+            context.fill();
+            context.closePath();
+            context.restore();
+                //champinon dot 
+            context.save();
+            context.fillStyle = "white";
+            context.strokeStyle = "white";
+            context.beginPath();
+            context.arc(590,400,9,0,2*Math.PI);
+            context.stroke();
+            context.fill();
+            context.closePath();
+            context.restore();
+             //champinon dot 
+            context.save();
+            context.fillStyle = "white";
+            context.strokeStyle = "white";
+            context.beginPath();
+            context.arc(655,415,9,0,2*Math.PI);
+            context.stroke();
+            context.fill();
+            context.closePath();
+            context.restore();
+                //estrella
+            context.save();
+            context.fillStyle = "#d6cc18";
+            context.strokeStyle = "#d6a318";
+            context.lineWidth = 2;
+            context.beginPath();
+            context.moveTo(390,20);
+            context.lineTo(420,70);
+            context.lineTo(475,70);
+            context.lineTo(430,110);
+            context.lineTo(445,170);
+            context.lineTo(390,150);
+            context.lineTo(340,170);
+            context.lineTo(350,110);
+            context.lineTo(310,70);
+            context.lineTo(360,70);
+            context.closePath();
+            context.stroke();
+            context.fill();
+            context.restore();
+        }
+    </script>
+<audio controls loop autoplay>
+</body>
+</html>
+
+    <source src="BGMusic.mp3" tyope="audio/mpeg">;
+  </audio>  
