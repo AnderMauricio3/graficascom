@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"></link>
+    <script src="utils.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Paint Time!</h1>
+        <div class="buttons">
+            <button id="red" type="button" value="#e32424">red</button>
+            <button id="orange" type="button" value="#e38024">orange</button>
+            <button id="yellow" type="button" value="#fce12b">yellow</button>
+            <button id="green" type="button" value="#a1d43b">green</button>
+            <button id="blue" type="button" value="#4ad1f0">blue</button>
+            <button id="violet" type="button" value="#ad6ceb">violet</button>
+            <button id="white" type="button" value="#ffffff">white</button>
+            <button id="black" type="button" value="#000000">Black</button>
+        </div>
+        <div id="button-borrar">
+            <button id="borrador" type="button">Eraser</button>
+        </div>
+        <div id="button-width">
+            <button id="width" type="button" value="1">1</button>
+            <button id="width" type="button" value="2">2</button>
+            <button id="width" type="button" value="4">4</button>
+            <button id="width" type="button" value="6">6</button>
+            <button id="width" type="button" value="8">8</button>
+            <button id="width" type="button" value="10">10</button>
+
+        </div>
+        <canvas id="canvas" width="1000" height="500"></canvas>
+        <script>
+            window.onload = function () {
+            var canvas = document.getElementById('canvas'),
+            context = canvas.getContext('2d');
+            mouse = utils.captureMouse(canvas);
+    
+        //para dibujar
+        canvas.addEventListener('mousedown', function () {
+        context.beginPath();
+        context.moveTo(mouse.x, mouse.y);
+        canvas.addEventListener('mousemove', onMouseMove, false);
+        }, false);
+        canvas.addEventListener('mouseup', function () {
+        canvas.removeEventListener('mousemove', onMouseMove, false);
+        }, false);
+        function onMouseMove () {
+        context.lineTo(mouse.x, mouse.y);
+        context.stroke();
+        }
+        //para cambiar de color
+        var colores = document.getElementsByClassName('buttons')[0];
+        colores.addEventListener('click',function(event){
+        context.strokeStyle = event.target.value;
+        });
+        //para borrar
+        var clearButton = document.getElementById('borrador');
+        clearButton.addEventListener('click',function(){
+        context.clearRect(0,0,canvas.width,canvas.height);
+        });
+        //para cambiar width
+        var width = document.getElementById('button-width');
+        width.addEventListener('click',function(event){
+        context.lineWidth = event.target.value;
+        });
+    }
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+.container{
+    text-align: center;
+    align-items: center;
+}
+
+h1{
+    font-family: "Cormorant Upright", serif;
+    font-style: italic;
+    color:#ff9fca
+}
+.buttons{
+    margin-left: 20rem;
+    margin-right: 20rem;
+    margin-bottom: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-around;
+}
+button{
+    width: 8rem;
+    margin-bottom: .5rem;
+    outline: none;
+}
+canvas{
+    background-color: #ffffff;
+    outline: #ff9fca 5px solid;
+}
+#red{
+    background-color: #e32424;
+    color: white;
+    font: 16px;
+}
+#orange{
+    background-color: #e38024;
+    color: white;
+    font: 16px;
+}
+#yellow{
+    background-color: #fce12b;
+    color: black;
+    font: 16px;
+}
+#green{
+    background-color: #a1d43b;
+    color: white;
+    font: 16px;
+}
+#blue{
+    background-color: #4ad1f0;
+    color: white;
+    font: 16px;
+}
+#violet{
+    background-color: #ad6ceb;
+    color: white;
+    font: 16px;
+}
+#white{
+    background-color: #ffffff;
+    color: black;
+    font: 16px;
+}
+#black{
+    background-color: #000000;
+    color: white;
+    font: 16px;
+}
+#borrador{
+    background-color: #ffbedb;
+    ;
+    color: black;
+    font: 16px;
+}
+#width{
+    margin: .5rem;
+    background-color: #ffbedb;
+    font: 16px;
+}
